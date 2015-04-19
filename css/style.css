@@ -376,9 +376,8 @@ body > header .service {
     top: 12px;
     z-index: 2;
     width: 118px;
-    height: 49px;
+    height: 52px;
     float: right;
-    margin-right: 1%;
     padding-top: 4px;
   }
 }
@@ -428,7 +427,7 @@ body > header .logoGroupIn {
 }
 @media (min-width: 840px) {
   body > header .logoGroupIn {
-    padding: 0 1%;
+    padding: 0;
   }
 }
 body > header .logoMyHealth {
@@ -505,14 +504,15 @@ body > header .logoTeladocWrap .logoTeladoc {
 /*_________/HEADER_________*/
 /*_________BANNER_________*/
 #promo {
-  position: absolute;
+  position: fixed;
   z-index: 3;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.75);
 }
 #promo #pr_cnt {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   margin: 0 auto;
   background: #fff;
   border: 2px solid #FFF;
@@ -522,6 +522,7 @@ body > header .logoTeladocWrap .logoTeladoc {
 }
 @media (min-width: 600px) {
   #promo #pr_cnt {
+    max-width: 600px;
     position: relative;
     top: 50%;
     margin-top: -250px;
@@ -591,11 +592,11 @@ body > header .logoTeladocWrap .logoTeladoc {
 #promo #pr_cnt #pr_bd {
   width: 100%;
   padding: 30px 15px;
+  background-color: #ebebeb;
   background-image: url("../img/bannerS.jpg");
   background-repeat: no-repeat;
   background-position: center -62px;
   background-size: auto;
-  border: 2px solid #FFF;
   -moz-border-radius: 0 0 10px 10px;
   -webkit-border-radius: 0 0 10px 10px;
   border-radius: 0 0 10px 10px;
@@ -696,7 +697,7 @@ body > header .logoTeladocWrap .logoTeladoc {
   color: #FFF;
   text-transform: uppercase;
   position: relative;
-  width: 269px;
+  width: 100%;
   height: 53px;
   background-color: #D84141;
   background-image: -moz-linear-gradient(bottom, #bf1717 0%, #ee6565 100%);
@@ -770,7 +771,7 @@ body > header .logoTeladocWrap .logoTeladoc {
   background-image: url("../img/mainbgleft.jpg"), url("../img/mainbgright.jpg");
   background-repeat: no-repeat;
   background-position: -250px top, 200px top;
-  padding-top: 25px;
+  padding-top: 10px;
   /*_________TOP ROW_________*/
   /*_________SIGNUP_________*/
   /*_________/SIGNUP_________*/
@@ -802,8 +803,7 @@ body > header .logoTeladocWrap .logoTeladoc {
     max-width: 1400px;
   }
 }
-.main h1,
-.main h3 {
+.main h1 {
   text-transform: uppercase;
   font: 700 4.2em "Open Sans", sans-serif;
   color: #082e6c;
@@ -811,16 +811,19 @@ body > header .logoTeladocWrap .logoTeladoc {
   margin: 0;
 }
 @media (min-width: 960px) {
-  .main h1,
-  .main h3 {
-    font: 700 5.83em "Open Sans", sans-serif;
+  .main h1 {
+    font: 700 5.9em/1.5em "Open Sans", sans-serif;
   }
 }
 .main h3 {
+  color: #082e6c;
+  text-align: center;
+  font: 700 4.2em "Open Sans", sans-serif;
+  text-transform: uppercase;
   margin-top: 22px;
   font-size: 1.875em;
   font-weight: 600;
-  margin: 15px auto;
+  margin: 0 auto 10px;
 }
 .main h3 b {
   font-weight: 700;
@@ -828,7 +831,7 @@ body > header .logoTeladocWrap .logoTeladoc {
 @media (min-width: 960px) {
   .main .topRowGroup {
     margin: 0 auto;
-    width: 960px;
+    width: 988px;
   }
 }
 @media (min-width: 960px) {
@@ -836,7 +839,7 @@ body > header .logoTeladocWrap .logoTeladoc {
     display: inline-block;
     float: right;
     margin: 0 auto;
-    width: 49%;
+    width: 50%;
   }
 }
 .main .signup {
@@ -883,7 +886,7 @@ body > header .logoTeladocWrap .logoTeladoc {
   }
 }
 .main .signup .body #firstpage {
-  padding: 10px 5%;
+  padding: 10px 2% 0;
 }
 .main .signup .body #firstpage fieldset {
   border: none;
@@ -896,7 +899,7 @@ body > header .logoTeladocWrap .logoTeladoc {
   .main .signup .body #firstpage fieldset {
     display: inline-block;
     width: 46%;
-    margin: 0 2% 15px;
+    margin: 0 2% 18px;
     padding: 0px;
     float: left;
   }
@@ -904,6 +907,7 @@ body > header .logoTeladocWrap .logoTeladoc {
 .main .signup .body #firstpage fieldset input {
   width: 100%;
   margin: 0;
+  text-indent: 14px;
   height: 32px;
   background-color: #FFF;
   border: 0.416667px solid #B7B7B7;
@@ -947,12 +951,9 @@ body > header .logoTeladocWrap .logoTeladoc {
   background-position: center;
   background-size: contain;
 }
-.main .videoGroup h3 {
-  margin: 35px auto 25px;
-}
 .main .videoGroup .video {
   width: 100%;
-  height: 301px;
+  height: 312px;
   margin: 0 auto;
 }
 @media (min-width: 300px) {
@@ -984,9 +985,6 @@ body > header .logoTeladocWrap .logoTeladoc {
     width: 49%;
     text-align: right;
   }
-  .main .videoGroup h3 {
-    margin: 14px auto 25px;
-  }
 }
 /*_________/VIDEO_________*/
 /*_________/TOP ROW_________*/
@@ -1014,17 +1012,28 @@ body > header .logoTeladocWrap .logoTeladoc {
 }
 @media (min-width: 960px) {
   .midGroup .benefit {
-    max-width: 960px;
+    max-width: 988px;
   }
 }
 .midGroup .benefit h2 {
-  font: 800 2.7em/1.1em "Open Sans", sans-serif;
+  font: 800 1.8em/1.1em "Open Sans", sans-serif;
   color: #F00;
   text-align: center;
+  white-space: pre-line;
+}
+@media (min-width: 360px) {
+  .midGroup .benefit h2 {
+    font: 800 2.2em/1.1em "Open Sans", sans-serif;
+  }
+}
+@media (min-width: 480px) {
+  .midGroup .benefit h2 {
+    font: 800 2.8em/1.1em "Open Sans", sans-serif;
+  }
 }
 @media (min-width: 960px) {
   .midGroup .benefit h2 {
-    font: 800 2.7em/1.1em "Open Sans", sans-serif;
+    white-space: normal;
   }
 }
 .midGroup .benefit h2 b {
@@ -1050,6 +1059,12 @@ body > header .logoTeladocWrap .logoTeladoc {
   list-style: none;
   line-height: 30px;
 }
+@media (max-width: 380px) {
+  .midGroup .benefitList ul li {
+    font: 700 1.6em/1.6em "Open Sans", sans-serif;
+    margin: 0.5em 0;
+  }
+}
 @media (min-width: 960px) {
   .midGroup .benefitList {
     float: left;
@@ -1069,6 +1084,11 @@ body > header .logoTeladocWrap .logoTeladoc {
     background-color: #fff;
   }
 }
+@media (max-width: 480px) {
+  .midGroup .priceWrap {
+    background-color: #fff;
+  }
+}
 .midGroup .priceWrap .helper {
   position: absolute;
   background-color: #fff;
@@ -1081,10 +1101,10 @@ body > header .logoTeladocWrap .logoTeladoc {
   width: 100%;
   margin: auto;
   background-color: #EBEBEB;
-  border: 18px solid #082E6C;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
+  border: 13px solid #082E6C;
+  -moz-border-radius: 22px;
+  -webkit-border-radius: 22px;
+  border-radius: 22px;
 }
 @media (min-width: 480px) {
   .midGroup .priceWrap .price {
@@ -1125,23 +1145,27 @@ body > header .logoTeladocWrap .logoTeladoc {
   }
 }
 .midGroup .priceWrap .price ul {
-  margin: 0px;
   padding: 0 0 0 8%;
   font: 600 1.7em "Open Sans", sans-serif;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
 }
 .midGroup .priceWrap .price ul li {
   margin: 0.7em 20px;
-  list-style-image: url("../img/v.png");
+  background-image: url("../img/v.png");
+  background-repeat: no-repeat;
+  background-position: 0px 3px;
+  padding-left: 25px;
 }
 .midGroup .priceWrap .price ul li:last-child {
-  list-style-image: url("../img/plus.png");
+  background-image: url("../img/v.png");
 }
 .midGroup .priceWrap .price .head {
   background-color: #00B9E0;
-  margin: -5px -5px 0 -5px;
-  -moz-border-radius: 5px 5px 0 0;
-  -webkit-border-radius: 5px 5px 0 0;
-  border-radius: 5px 5px 0 0;
+  -moz-border-radius: 9px 9px 0 0;
+  -webkit-border-radius: 9px 9px 0 0;
+  border-radius: 9px 9px 0 0;
 }
 .midGroup .priceWrap .price .head p {
   margin: 0;
@@ -1150,24 +1174,32 @@ body > header .logoTeladocWrap .logoTeladoc {
   text-align: center;
 }
 .midGroup .priceWrap .price .head p:first-child {
-  font: 800 2.3em "Open Sans", sans-serif;
+  font: 800 2em "Open Sans", sans-serif;
   background-color: #4fcfea;
   font-weight: 700;
-  -moz-border-radius: 5px 5px 0 0;
-  -webkit-border-radius: 5px 5px 0 0;
-  border-radius: 5px 5px 0 0;
+  -moz-border-radius: 12px 12px 0 0;
+  -webkit-border-radius: 12px 12px 0 0;
+  border-radius: 12px 12px 0 0;
   background-image: -moz-linear-gradient(bottom, #20c2e4 0%, #6cd6ec 100%);
   background-image: -o-linear-gradient(bottom, #20c2e4 0%, #6cd6ec 100%);
   background-image: -webkit-linear-gradient(bottom, #20c2e4 0%, #6cd6ec 100%);
   background-image: linear-gradient(to top, #20c2e4 0%, #6cd6ec 100%);
 }
+@media (max-width: 380px) {
+  .midGroup .priceWrap .price .head p:first-child {
+    font: 800 1.9em "Open Sans", sans-serif;
+  }
+}
+@media (min-width: 480px) {
+  .midGroup .priceWrap .price .head p:first-child {
+    font: 800 2.3em "Open Sans", sans-serif;
+  }
+}
 .midGroup .priceWrap .price .body {
   background-color: #EBEBEB;
-  margin: 0px -5px -5px -5px;
   -moz-border-radius: 0 0 5px 5px;
   -webkit-border-radius: 0 0 5px 5px;
   border-radius: 0 0 5px 5px;
-  padding: 0 0 20px 0;
 }
 @media (min-width: 960px) {
   .midGroup .priceWrap {
@@ -1176,9 +1208,6 @@ body > header .logoTeladocWrap .logoTeladoc {
     top: 94px;
     margin: 0;
     width: 403px;
-  }
-  .midGroup .priceWrap .price .body {
-    padding: 0 0 5px 0;
   }
 }
 /*_________MID ROW_________*/
@@ -1219,6 +1248,12 @@ body > header .logoTeladocWrap .logoTeladoc {
   background-repeat: no-repeat;
   background-position: center;
 }
+@media (min-width: 960px) {
+  .accessWrap .access .pic {
+    width: 16%;
+    float: left;
+  }
+}
 @media (max-width: 478px) {
   .accessWrap .access .pic {
     height: 92px;
@@ -1232,8 +1267,15 @@ body > header .logoTeladocWrap .logoTeladoc {
 .accessWrap .access .helper {
   height: inherit;
 }
+@media (min-width: 960px) {
+  .accessWrap .access .helper {
+    width: 84%;
+    float: left;
+  }
+}
 .accessWrap .access .helper p {
-  font: 800 3em/1em "Open Sans", sans-serif;
+  white-space: pre-line;
+  font: 800 2.8em/1em "Open Sans", sans-serif;
   color: #00B9E0;
   text-transform: uppercase;
   display: table-cell;
@@ -1250,8 +1292,10 @@ body > header .logoTeladocWrap .logoTeladoc {
 }
 @media (min-width: 960px) {
   .accessWrap .access .helper p {
+    white-space: normal;
     margin: 0 auto;
-    font: 800 2.5em/1em "Open Sans", sans-serif;
+    padding: 0;
+    font: 800 3.4em/1em "Open Sans", sans-serif;
   }
 }
 /*_________/24/7 365 ROW_________*/
@@ -1304,17 +1348,23 @@ body > header .logoTeladocWrap .logoTeladoc {
 }
 @media (min-width: 960px) {
   .bottomContent .whyWrap .why {
-    width: 95%;
+    width: 100%;
   }
 }
 @media (max-width: 479px) {
   .bottomContent .whyWrap .why {
-    width: 85%;
+    width: 100%;
+    font-size: 1.4em;
   }
 }
 .bottomContent .whyWrap .why p {
   margin: 0px 0px;
   padding: 19px 13px 19px 27px;
+}
+@media (max-width: 479px) {
+  .bottomContent .whyWrap .why p {
+    padding: 14px 5% 19px;
+  }
 }
 .bottomContent .whyWrap .whyIn {
   margin: -5px;
@@ -1418,7 +1468,7 @@ footer .footerIn {
   }
 }
 footer .footerIn .legal {
-  max-width: 960px;
+  max-width: 988px;
   margin: 0 auto;
   padding: 5px;
 }
@@ -1479,50 +1529,50 @@ footer .logo {
   background-image: url("../img/blonde.jpg");
   background-repeat: no-repeat;
   background-position: -300px top;
-  min-height: 766px;
+  min-height: 722px;
   padding: 30px 0 0 0;
   max-width: 1400px;
   margin: 0 auto;
 }
 @media (min-width: 960px) {
   .thankyou {
-    background-position: -200px top;
+    background-position: -200px -81px;
   }
 }
 @media (min-width: 1024px) {
   .thankyou {
-    background-position: -166px top;
+    background-position: -166px -81px;
   }
 }
 @media (min-width: 1156px) {
   .thankyou {
-    background-position: -107px top;
+    background-position: -107px -81px;
   }
 }
 @media (min-width: 1210px) {
   .thankyou {
-    background-position: -88px top;
+    background-position: -88px -81px;
   }
 }
 @media (min-width: 1280px) {
   .thankyou {
-    background-position: -45px top;
+    background-position: -45px -81px;
   }
 }
 @media (min-width: 1400px) {
   .thankyou {
-    background-position: left top;
+    background-position: left -81px;
   }
 }
 .thankyou .congratsWrap {
-  max-width: 980px;
+  max-width: 988px;
   margin: 0;
   padding: 0;
   margin: 0 auto;
 }
 .thankyou .congratsWrap .congrats {
-  margin: 0px 0.5% 30px;
-  width: 99%;
+  margin: 0px 0 25px;
+  width: 100%;
   background-color: #00B9E0;
   border: 2px solid #FFF;
   -moz-border-radius: 10px;
@@ -1556,7 +1606,7 @@ footer .logo {
   }
 }
 .thankyou .group {
-  max-width: 980px;
+  max-width: 988px;
   margin: 0;
   padding: 0;
   margin: 0 auto;
@@ -1574,20 +1624,21 @@ footer .logo {
   .thankyou .group .confirmationWrap {
     display: block;
     float: none;
-    width: 100%;
+    width: 98%;
+    margin: 0 1%;
     max-width: none;
   }
 }
 .thankyou .group .confirmationWrap .confirmation {
   color: #000;
-  width: 98%;
-  margin: 0px 1%;
+  width: 100%;
+  margin: 0;
 }
 .thankyou .group .confirmationWrap .confirmation header {
-  font: 700 2.1em "Open Sans", sans-serif;
+  font: 700 2em "Open Sans", sans-serif;
 }
 .thankyou .group .confirmationWrap .confirmation p {
-  font: 600 1.667em "Open Sans", sans-serif;
+  font: 600 1.7em/1.55em "Open Sans", sans-serif;
 }
 .thankyou .group .confirmationWrap .confirmation p b {
   font-weight: 700;
@@ -1625,13 +1676,13 @@ footer .logo {
   position: relative;
   display: block;
   width: 100%;
-  height: 3em;
+  height: 3.5em;
   background-color: #082E6C;
   border: 1px solid #FFF;
   -moz-border-radius: 10px 10px 0 0;
   -webkit-border-radius: 10px 10px 0 0;
   border-radius: 10px 10px 0 0;
-  font: 700 2.5em/1.25em "Open Sans", sans-serif;
+  font: 700 2.5em/1.5em "Open Sans", sans-serif;
   color: #fff;
   text-align: center;
   text-transform: uppercase;
@@ -1648,12 +1699,12 @@ footer .logo {
 .thankyou .group .detailsWrap .details .head .fix {
   position: relative;
   top: 50%;
-  margin: -1.25em 0 0 0;
+  margin: -1.5em 0 0 0;
 }
 .thankyou .group .detailsWrap .details .body h3 {
   color: #000;
-  font: 600 1.667em "Open Sans", sans-serif;
-  padding: 10px 3.5% 0;
+  font: 600 2em "Open Sans", sans-serif;
+  padding: 5px 3.5% 3px;
   margin: 0;
 }
 .thankyou .group .detailsWrap .details .body hr {
@@ -1667,12 +1718,12 @@ footer .logo {
 .thankyou .group .detailsWrap .details .body p {
   color: #000;
   font: 400 1.7em/1.25em "Open Sans", sans-serif;
-  padding: 8px 3.5% 20px;
+  padding: 8px 3.5% 14px;
   margin: 0;
 }
 .thankyou .group .detailsWrap .details .body table {
-  width: 93%;
-  margin: 10px 3.5% 30px;
+  width: 94%;
+  margin: 10px 3% 20px;
   font: 400 1.7em/1.25em "Open Sans", sans-serif;
 }
 .thankyou .group .detailsWrap .details .body table td:last-child {
@@ -1685,7 +1736,11 @@ footer .logo {
 }
 /*____________PAGE 3____________*/
 .proceed {
+  min-height: 536px;
   padding-top: 30px;
+  background-image: url("../img/orderbg.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 .proceed h1 {
   margin: 0;
@@ -1695,6 +1750,16 @@ footer .logo {
   color: #082E6C;
   font: 700 4.167em/1em "Open Sans", sans-serif;
 }
+@media (max-width: 480px) {
+  .proceed h1 {
+    font: 700 3em/1em "Open Sans", sans-serif;
+  }
+}
+@media (max-width: 360px) {
+  .proceed h1 {
+    font: 700 2.4em/1em "Open Sans", sans-serif;
+  }
+}
 .proceed h2 {
   margin: 0;
   padding: 0;
@@ -1703,6 +1768,16 @@ footer .logo {
   color: #0bbce2;
   font: 700 4.167em "Open Sans", sans-serif;
 }
+@media (max-width: 480px) {
+  .proceed h2 {
+    font: 700 3em/1.25em "Open Sans", sans-serif;
+  }
+}
+@media (max-width: 360px) {
+  .proceed h2 {
+    font: 700 2em/1em "Open Sans", sans-serif;
+  }
+}
 .proceed h3 {
   margin: 0;
   padding: 0;
@@ -1710,6 +1785,18 @@ footer .logo {
   text-align: center;
   color: #082e6c;
   font: 600 1.875em "Open Sans", sans-serif;
+}
+@media (max-width: 480px) {
+  .proceed h3 {
+    font: 700 1.8em/1em "Open Sans", sans-serif;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 360px) {
+  .proceed h3 {
+    font: 700 2em/1em "Open Sans", sans-serif;
+    white-space: pre-line;
+  }
 }
 .proceed .contentWrap {
   width: 100%;
@@ -1824,6 +1911,12 @@ footer .logo {
   display: block;
   min-width: 460px;
   position: relative;
+}
+@media (max-width: 480px) {
+  .proceed .group .yourplan .details .head {
+    min-width: 100%;
+    font: 700 3em/1.5em "Open Sans", sans-serif;
+  }
 }
 .proceed .group .yourplan .details .body {
   width: 100%;
@@ -1944,7 +2037,7 @@ footer .logo {
   background-repeat: no-repeat;
   background-position: center;
   height: 140px;
-  background-size: 60% auto;
+  background-size: 90% auto;
 }
 @media (min-width: 480px) {
   .proceed .group .yourplan .details .body .icons {
@@ -1990,6 +2083,15 @@ footer .logo {
   -webkit-border-radius: 10px 10px 0 0;
   border-radius: 10px 10px 0 0;
 }
+@media (max-width: 480px) {
+  .proceed .orderWrap .order .head {
+    font: 700 3em/1.5em "Open Sans", sans-serif;
+    height: auto;
+  }
+}
+.proceed .orderWrap .order .body {
+  padding: 0 0 15px 0;
+}
 .proceed .orderWrap .order .body #secondpage #billingsame {
   display: none;
 }
@@ -2009,6 +2111,13 @@ footer .logo {
   min-width: 75px;
   width: 24%;
   text-align: center;
+}
+@media (max-width: 480px) {
+  .proceed .orderWrap .order .body #secondpage .tabs .shippingTab,
+  .proceed .orderWrap .order .body #secondpage .tabs .billingTab,
+  .proceed .orderWrap .order .body #secondpage .tabs .same {
+    width: 50%;
+  }
 }
 .proceed .orderWrap .order .body #secondpage .tabs .active {
   border: 1px solid #B7B7B7;
@@ -2032,6 +2141,15 @@ footer .logo {
   background-image: url("../img/checkbox.png");
   background-repeat: no-repeat;
   background-position: 5px top;
+}
+@media (max-width: 480px) {
+  .proceed .orderWrap .order .body #secondpage .tabs .same {
+    display: block;
+    clear: both;
+    width: 100%;
+    border-bottom: 0;
+    margin-top: 8px;
+  }
 }
 .proceed .orderWrap .order .body #secondpage .tabs .same.on {
   background-position: 5px -26px;
@@ -2059,14 +2177,13 @@ footer .logo {
   .proceed .orderWrap .order .body #secondpage fieldset.half input[type="text"],
   .proceed .orderWrap .order .body #secondpage fieldset.half input[type="tel"],
   .proceed .orderWrap .order .body #secondpage fieldset.half input[type="number"],
-  .proceed .orderWrap .order .body #secondpage fieldset.half input[type="email"],
-  .proceed .orderWrap .order .body #secondpage fieldset.half select {
+  .proceed .orderWrap .order .body #secondpage fieldset.half input[type="email"] {
     width: 82%;
-    display: block;
+    display: inline;
     padding: 0;
     text-indent: 10px;
     height: 32px;
-    margin: 5px 10%;
+    margin: 5px 10% 18px;
   }
 }
 @media (min-width: 960px) {
@@ -2139,7 +2256,7 @@ footer .logo {
 .proceed .orderWrap .order .body #secondpage input[type="number"],
 .proceed .orderWrap .order .body #secondpage input[type="email"],
 .proceed .orderWrap .order .body #secondpage select {
-  width: 90%;
+  width: 91%;
   display: block;
   padding: 0;
   text-indent: 10px;
@@ -2161,8 +2278,9 @@ footer .logo {
 .proceed .orderWrap .order .body #secondpage label.error {
   color: red;
   font-size: 1.25em;
-  margin: 0px 0 5px 30px;
+  margin: -14px 0 5px 30px;
   font-weight: 600;
+  position: absolute;
 }
 .proceed .orderWrap .order .body #secondpage span {
   display: none;
@@ -2190,15 +2308,27 @@ footer .logo {
   display: inline-block;
   margin-left: 25px;
 }
-.proceed .orderWrap .order .body #secondpage .gender label.picCtrl {
-  padding: 0 5px 0 0;
-  margin: 0;
-  text-indent: 25px;
+.proceed .orderWrap .order .body #secondpage .gender input[type="radio"] {
+  display: none;
+}
+.proceed .orderWrap .order .body #secondpage .gender input[type="radio"] + label {
   display: inline-block;
+  margin: 0 10px 0 0;
+}
+.proceed .orderWrap .order .body #secondpage .gender input[type="radio"] + label span {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
   background-image: url("../img/radio.png");
   background-position: left top;
   background-repeat: no-repeat;
-  height: 22px;
+  float: left;
+}
+.proceed .orderWrap .order .body #secondpage .gender input[type="radio"]:checked + label span {
+  background-position: left bottom;
 }
 .proceed .orderWrap .order .body #secondpage .dependants input {
   width: 70%;
@@ -2251,24 +2381,136 @@ footer .logo {
     margin-top: 0px;
   }
 }
-@media (min-width: 959px) {
+@media (max-width: 360px) {
+  .proceed .orderWrap .order .body #secondpage .dependants .plus {
+    right: 5px;
+  }
+}
+.proceed .orderWrap .order .body #secondpage .cardtype #cctypeD {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 480px) {
+  .proceed .orderWrap .order .body #secondpage .cardtype #cctypeD {
+    margin: 0 0 0 -20px;
+  }
+}
+.proceed .orderWrap .order .body #secondpage .cardtype .group {
+  display: inline-block;
+  width: 50%;
+  padding: 0 0% 0 25px;
+  float: left;
+}
+@media (max-width: 479px) {
+  .proceed .orderWrap .order .body #secondpage .cardtype .group {
+    display: block;
+    width: 100%;
+    padding: 0 0% 0 15px;
+    margin-bottom: 10px;
+  }
+}
+.proceed .orderWrap .order .body #secondpage .cardtype .shift {
+  position: relative;
+  top: 2px;
+}
+.proceed .orderWrap .order .body #secondpage .cardtype label,
+.proceed .orderWrap .order .body #secondpage .cardtype input {
+  display: inline;
+}
+.proceed .orderWrap .order .body #secondpage .cardtype label.notinline {
+  display: block;
+  margin-bottom: 10px;
+}
+.proceed .orderWrap .order .body #secondpage .cardtype label.narrow {
+  margin: 0;
+  padding: 0;
+  font-size: 1.25em;
+  position: relative;
+  font-style: italic;
+  bottom: 10px;
+  left: 10px;
+}
+.proceed .orderWrap .order .body #secondpage .cardtype input[type="radio"] {
+  display: none;
+}
+.proceed .orderWrap .order .body #secondpage .cardtype input[type="radio"] + label {
+  display: inline-block;
+  margin: 0 1px 0 0;
+}
+.proceed .orderWrap .order .body #secondpage .cardtype input[type="radio"] + label span {
+  display: inline-block;
+  width: 41px;
+  height: 27px;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: url("../img/cctype.png");
+  background-repeat: no-repeat;
+  float: left;
+  border: 2px solid #EBEBEB;
+}
+.proceed .orderWrap .order .body #secondpage .cardtype input[type="radio"] + label.master span {
+  background-position: left center;
+}
+.proceed .orderWrap .order .body #secondpage .cardtype input[type="radio"] + label.visa span {
+  background-position: center center;
+}
+.proceed .orderWrap .order .body #secondpage .cardtype input[type="radio"] + label.amex span {
+  background-position: right center;
+}
+.proceed .orderWrap .order .body #secondpage .cardtype input[type="radio"]:checked + label span {
+  border: 2px solid red;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+@media (max-width: 959px) {
+  .proceed .orderWrap .order .body #secondpage .expiration {
+    margin-left: 24px;
+  }
+}
+@media (max-width: 479px) {
+  .proceed .orderWrap .order .body #secondpage .expiration {
+    margin-left: 5%;
+  }
+  .proceed .orderWrap .order .body #secondpage .expiration select[name="ccexpiremonth"] {
+    width: 70%;
+  }
+  .proceed .orderWrap .order .body #secondpage .expiration select[name="ccexpireyear"] {
+    width: 20%;
+  }
+}
+@media (min-width: 960px) {
   .proceed .orderWrap .order .body #secondpage .expiration select {
     display: inline;
     width: 37%;
   }
 }
+.proceed .orderWrap .order .body #secondpage .expiration label {
+  margin: 0 0 0 7px;
+}
 .proceed .orderWrap .order .body #secondpage .expiration select {
   display: inline;
+  margin: 5px 10px 5px 0;
+}
+.proceed .orderWrap .order .body #secondpage .expiration select[name="ccexpiremonth"] {
+  width: 126px;
+}
+.proceed .orderWrap .order .body #secondpage .expiration select[name="ccexpireyear"] {
+  width: 80px;
 }
 .proceed .orderWrap .order .body #secondpage .cvv input {
   width: 50px;
   display: inline-block;
-  margin: 0px 0 0 5%;
+  margin: 0;
   padding: 0;
   float: left;
 }
 .proceed .orderWrap .order .body #secondpage .cvv .cvvgroup {
   display: inline-block;
+  width: 108px;
+  margin-left: 5%;
+  float: left;
 }
 .proceed .orderWrap .order .body #secondpage .cvv .cvvpic {
   display: inline-block;
@@ -2278,10 +2520,23 @@ footer .logo {
   background-image: url("../img/cvvpic.png");
   background-position: center top;
   background-repeat: no-repeat;
-  margin: 2px 2%;
+  margin: 2px 9px;
+}
+.proceed .orderWrap .order .body #secondpage .cvv label.under {
+  font-style: italic;
+  display: inline-block;
+  float: left;
+  margin: 7px;
+}
+@media (max-width: 479px) {
+  .proceed .orderWrap .order .body #secondpage .cvv label.under {
+    display: block;
+    margin: 5px 20px;
+  }
 }
 .proceed .orderWrap .order .body #secondpage .ok {
   margin: 15px 0;
+  padding: 0 0 0 20px;
 }
 @media (min-width: 959px) {
   .proceed .orderWrap .order .body #secondpage .ok {
@@ -2310,7 +2565,7 @@ footer .logo {
 }
 .proceed .orderWrap .order .body #secondpage #validate2 {
   padding: 0;
-  margin: 30px auto;
+  margin: 20px auto;
   width: 268px;
   height: 80px;
   background-image: url("../img/proceed.png");

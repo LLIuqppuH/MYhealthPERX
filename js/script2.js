@@ -166,6 +166,32 @@ $(document).ready(function() {
 ////////////////////////end page1
 
 /*PAGE2*/
+/****place order clicked on 960*****/
+		$('.stage3 a').click(function () {
+			if ($('.titleWrap').width()>959){
+				event.preventDefault();
+			}
+		});
+
+/****cc type select <--> radio*****/
+		$('#visa').click(function () {
+			$('select[name=cctypeD]').val('Visa');
+		});
+		$('#master').click(function () {
+			$('select[name=cctypeD]').val('MasterCard');
+		});
+		$('#amex').click(function () {
+			$('select[name=cctypeD]').val('Amex');
+		});
+
+		$( "#cctypeD" ).change(function() {			
+			str=$(this).val();
+			str=str.toLowerCase();
+			str=str.substr(0, 6)
+			$('input[value="'+str+'"]').prop('checked',true)
+		});
+/****cc type select <--> radio ends*****/
+
 /****add dependants*****/
 		if ($('section.proceed')[0]){
 			function setplusY(){
@@ -197,19 +223,21 @@ $(document).ready(function() {
 					},
 					email:{
 						required: true,
-						minlength: 6,
+						minlength: 5+1,
 						email:true
 					},
 					billingadress:{
-						required: function (){return ($('#billingsame').val()==0)?true:false;},
-						minlength: 3
+						required: function(element) {
+        return $('#billingsame').val()<1;
+      },
+						minlength: 6
 					},
 					billingcity:{
-						required: function (){return ($('#billingsame').val()==0)?true:false;},
+						required: false,
 						minlength: 3
 					},
 					billingzip:{
-						required: function (){return ($('#billingsame').val()==0)?true:false;},
+						required: false,
 						minlength: 5
 					},
 					day:{
@@ -325,26 +353,14 @@ $(document).ready(function() {
 			});	
 /*********/
 
-			$('.stage3 a').click(function () {
-				if ($('.titleWrap').width()>959){
-					event.preventDefault();
-				}
-
-			});
-
-
 			var billship='different';
 			var dependants=1;
 
 			$('.shippingTab, .billingTab').click(function () {
-
 				if (billship==='different') {
 					$('.shippingTab, .billingTab').toggleClass('active');
 					$('.shipping, .billing').toggleClass('visibletab');
-				}
-
-				console.log('tab clicked');
-			
+				}			
 			});
 
 
@@ -353,7 +369,6 @@ $(document).ready(function() {
 				$('.tabs .same').toggleClass('on');
 
 				if ($('.tabs .same').hasClass('on')){
-
 					billship='same';
 
 					$('.shippingTab').removeClass('active').addClass('active');
@@ -376,22 +391,7 @@ $(document).ready(function() {
 				'"></div>';
 
 				$(paste).appendTo('.depGroup');
-
-				//var shift=$('.depGroup').height();
-				//console.log(shift);
-
-
-				
-				//var currentY=parseFloat($('#plus').css("margin-top"));
-				setplusY();
-
-				
-
-
-				console.log(currentY);	
-
-
-
+				setplusY();	
 			});
 
 
@@ -409,31 +409,6 @@ $(document).ready(function() {
 				checkbox=$('#agree')[0];
 				checkbox.checked=!checkbox.checked;				
 				$('fieldset.ok .checkbox').css('background-position','center '+((checkbox.checked)?'bottom':'top'));
-				
-
-				console.log('#agree clicked');
-				/*
-				if (checkbox.checked){
-					checkbox.checked=false;
-					$('fieldset.ok .checkbox').css('background-position','center top');
-				}else{
-					checkbox.checked=true;
-					$('fieldset.ok .checkbox').css('background-position','center bottom');
-				}*/				
-
-				
-
-
-
-				/*
-				if ($('#agree').val()==0){
-					$('#agree').val('1');
-					$('fieldset.ok .checkbox').css('background-position','center bottom');
-				}else{
-					$('#agree').val('0');
-					$('fieldset.ok .checkbox').css('background-position','center top');
-				}*/
-
 			});
 
 	/////VALIDATE
@@ -441,8 +416,6 @@ $(document).ready(function() {
 				event.preventDefault();
 
 				flag=$("#secondpage").valid();
-
-				
 
 				//RESULT?
 				if (flag) {
@@ -460,9 +433,4 @@ $(document).ready(function() {
 		}
 		/*END PAGE2*/
 
-
-
-
-
-
-	});
+});

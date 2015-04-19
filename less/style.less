@@ -38,9 +38,8 @@ body>header {
 			top: 12px;
 			z-index: 2;
 			width: 118px;
-			height: 49px;
+			height: 52px;
 			float: right;
-			margin-right: 1%;
 			padding-top: 4px;
 		}
 	}
@@ -77,7 +76,7 @@ body>header {
 			padding: 0 8%;
 		}
 		@media (min-width: 840px) {
-			padding: 0 1%;
+			padding: 0;
 		}		
 	}
 	.logoMyHealth {
@@ -142,16 +141,18 @@ body>header {
 
 /*_________BANNER_________*/
 #promo {
-	position: absolute;
+	position: fixed;
 	z-index: 3;
 	width: 100%;
 	height: 100%;
 	background:rgba(0,0,0,0.75);
 	#pr_cnt {
-		width: 300px;
+		width: 100%;
+		max-width: 300px;
 		margin: 0 auto;
 		background:#fff;
 		@media (min-width: 600px) {
+			max-width: 600px;
 			width: 600px;
 			position: relative;
 			top: 50%;
@@ -240,6 +241,7 @@ body>header {
 		#pr_bd {
 			width: 100%;
 			padding: 30px 15px;
+			background-color: rgb(235, 235, 235);
 				@media (min-width: 600px) {
 					background-image: url("../img/bannerM.jpg");
 				}
@@ -249,7 +251,6 @@ body>header {
 			background-position: center -62px;
 			background-size: auto;
 	
-			border: 2px solid #FFF;
 			-moz-border-radius: 0 0 10px 10px;
 			-webkit-border-radius: 0 0 10px 10px;
 			border-radius: 0 0 10px 10px;
@@ -350,7 +351,7 @@ body>header {
 					text-transform: uppercase;
 					position: relative;
 
-					width: 269px;
+					width: 100%;
 					height: 53px;
 					background-color: #D84141;
 					background-image: -moz-linear-gradient(bottom, #bf1717 0%, #ee6565 100%);
@@ -449,23 +450,27 @@ body>header {
 	@media (min-width: 1400px) {
 		max-width:1400px;
 	}		
-	padding-top: 25px;
+	padding-top: 10px;
 /*_________TOP ROW_________*/
-	h1,h3 {
+	h1{
 		text-transform: uppercase;
 		font:700 4.2em "Open Sans",sans-serif;
 		color:#082e6c;
 		text-align: center;
 		margin: 0;
 		@media (min-width: 960px) {
-			font:700 5.83em "Open Sans",sans-serif;
+			font:700 5.9em/1.5em "Open Sans",sans-serif;
 		}
 	}
 	h3 {
+		color:#082e6c;
+		text-align: center;
+		font:700 4.2em "Open Sans",sans-serif;
+		text-transform: uppercase;
 		margin-top: 22px;
 		font-size: 1.875em;
 		font-weight: 600;
-		margin: 15px auto;
+		margin: 0 auto 10px;
 		b {
 			font-weight: 700;
 		}			
@@ -474,7 +479,7 @@ body>header {
 	.topRowGroup {
 		@media (min-width: 960px) {
 			margin: 0 auto;
-			width:960px;
+			width:988px;
 		}
 	}
 
@@ -483,7 +488,7 @@ body>header {
 			display: inline-block;
 			float: right;
 			margin: 0 auto;
-			width: 49%;
+			width: 50%;
 		}
 	}
 /*_________SIGNUP_________*/
@@ -526,7 +531,7 @@ body>header {
 			}
 /*_________FORM_________*/
 			#firstpage {
-				padding: 10px 5%;
+				padding: 10px 2% 0;
 				fieldset {
 					border: none;
 					display: block;
@@ -536,13 +541,14 @@ body>header {
 					@media (min-width: 480px) {
 						display: inline-block;
 						width: 46%;
-						margin: 0 2% 15px;
+						margin: 0 2% 18px;
 						padding: 0px;
 						float: left;
 					}
 					input {
 						width: 100%;
 						margin: 0;
+						text-indent: 14px;
 						height: 32px;
 						background-color: #FFF;
 						border: 0.416667px solid #B7B7B7;
@@ -600,12 +606,9 @@ body>header {
 /*_________/SIGNUP_________*/
 /*_________VIDEO_________*/
 	.videoGroup {
-		h3{
-			margin: 35px auto 25px;
-		}		
 		.video {
 			width: 100%;
-			height: 301px;
+			height: 312px;
 			margin: 0 auto;
 			@media (min-width: 300px) {
 				width: 100%;
@@ -632,9 +635,6 @@ body>header {
 			vertical-align: top;
 			width: 49%;
 			text-align: right;
-			h3 {
-				margin: 14px auto 25px;
-			}
 		}		
 	}
 }
@@ -654,19 +654,26 @@ body>header {
 			}
 
 			@media (min-width: 960px) {
-				max-width: 960px;
+				max-width: 988px;
 			}
 
 			max-width: 100%;
 			margin: 0 auto;
 			clear: both;
 	 		h2 {
-				font: 800 2.7em/1.1em "Open Sans",sans-serif;
+				font: 800 1.8em/1.1em "Open Sans",sans-serif;
+				@media (min-width: 360px) {
+					font: 800 2.2em/1.1em "Open Sans",sans-serif;
+				}
+				@media (min-width: 480px) {
+					font: 800 2.8em/1.1em "Open Sans",sans-serif;
+				}
 				@media (min-width: 960px) {
-					font: 800 2.7em/1.1em "Open Sans",sans-serif;
+					white-space: normal;
 				}
 				color: #F00;
 				text-align: center;
+				white-space: pre-line;
 				b{
 					color: #056EB8;
 					font-weight: 800;
@@ -679,6 +686,11 @@ body>header {
 			ul {
 				padding: 0 1%;
 				li {
+					@media (max-width: 380px) {
+						font: 700 1.6em/1.6em "Open Sans",sans-serif;
+						margin: 0.5em 0;
+					}
+
 					display: list-item;
 					margin: 0.66em 0;
 					background-image: url("../img/v_red.png");
@@ -708,6 +720,9 @@ body>header {
 			@media (min-width: 960px) {
 				background-color: #fff;
 			}
+			@media (max-width: 480px) {
+				background-color: #fff;
+			}
 			clear: both;
 			background-color: #00B9E0;
 			margin: 30px 0 50px;
@@ -719,7 +734,6 @@ body>header {
 			}
 			.price {
 
-
 				@media (min-width: 480px) {
 					max-width: 400px;					
 				}
@@ -727,16 +741,15 @@ body>header {
 					text-align: center;
 				}
 
-
 				position: relative;
 				top: 12px;
 				width: 100%;
 				margin: auto;
 				background-color: #EBEBEB;
-				border: 18px solid #082E6C;
-				-moz-border-radius: 10px;
-				-webkit-border-radius: 10px;
-				border-radius: 10px;
+				border: 13px solid #082E6C;
+				-moz-border-radius: 22px;
+				-webkit-border-radius: 22px;
+				border-radius: 22px;
 				.only {
 					font: 800 2em "Open Sans",sans-serif;
 					font-style: italic;
@@ -765,21 +778,26 @@ body>header {
 					margin: 0px;
 					padding: 0 0 0 8%;
 					font: 600 1.7em "Open Sans",sans-serif;
+					padding: 0px;
+					margin: 0px;
+					list-style-type: none;
 
 					li {
 						margin: 0.7em 20px;
-						list-style-image: url("../img/v.png");
+						background-image: url("../img/v.png");
+						background-repeat: no-repeat;
+						background-position: 0px 3px;
+						padding-left: 25px;
 						&:last-child {
-						list-style-image: url("../img/plus.png");
+							background-image: url("../img/v.png");						
 						}
 					}		
 				}
 				.head {
 					background-color: #00B9E0;
-					margin: -5px -5px 0 -5px;
-					-moz-border-radius: 5px 5px 0 0;
-					-webkit-border-radius: 5px 5px 0 0;
-					border-radius: 5px 5px 0 0;				
+					-moz-border-radius: 9px 9px 0 0;
+					-webkit-border-radius: 9px 9px 0 0;
+					border-radius: 9px 9px 0 0;				
 					p {
 						margin: 0;
 						font: 700 3.05em "Open Sans",sans-serif;
@@ -787,12 +805,18 @@ body>header {
 						text-align: center;
 					}
 					p:first-child {
-						font: 800 2.3em "Open Sans",sans-serif;
+						font: 800 2em "Open Sans",sans-serif;
+						@media (max-width: 380px) {
+							font: 800 1.9em "Open Sans",sans-serif;
+						}
+						@media (min-width: 480px) {
+							font: 800 2.3em "Open Sans",sans-serif;
+						}
 						background-color: #4fcfea;
 						font-weight: 700;
-						-moz-border-radius: 5px 5px 0 0;
-						-webkit-border-radius: 5px 5px 0 0;
-						border-radius: 5px 5px 0 0;
+						-moz-border-radius: 12px 12px 0 0;
+						-webkit-border-radius: 12px 12px 0 0;
+						border-radius: 12px 12px 0 0;
 						background-image: -moz-linear-gradient(bottom, #20c2e4 0%, #6cd6ec 100%);
 						background-image: -o-linear-gradient(bottom, #20c2e4 0%, #6cd6ec 100%);
 						background-image: -webkit-linear-gradient(bottom, #20c2e4 0%, #6cd6ec 100%);
@@ -801,11 +825,10 @@ body>header {
 				}
 				.body {
 					background-color: #EBEBEB;
-					margin: 0px -5px -5px -5px;
 					-moz-border-radius: 0 0 5px 5px;
 					-webkit-border-radius: 0 0 5px 5px;
 					border-radius: 0 0 5px 5px;	
-					padding: 0 0 20px 0;
+
 				}
 			}
 			@media (min-width: 960px) {
@@ -813,11 +836,7 @@ body>header {
 				right: -6px;
 				top: 94px;
 				margin: 0;
-				width: 403px;
-				.price .body {
-					padding: 0 0 5px 0;
-				}
-					
+				width: 403px;				
 			}
 		}	
 /*_________/PRICING 19.99_________*/	
@@ -846,6 +865,10 @@ body>header {
 		height: 84px;
 		margin-bottom: 20px;
 		.pic {
+			@media (min-width: 960px) {
+				width: 16%;
+				float: left;
+			}
 
 			@media (max-width: 478px) {
 				height: 92px;
@@ -854,7 +877,7 @@ body>header {
 					font: 800 1.5em/1em "Open Sans", sans-serif;
 					background-image: url("../img/247fix.png");
 					background-position: center;
-}
+			}
 
 			display: inline-block;
 			top: 4px;
@@ -868,19 +891,23 @@ body>header {
 		}
 		.helper {
 			height:inherit;
+			@media (min-width: 960px) {
+				width: 84%;
+				float: left;
+			}
 			p {
-	@media (max-width: 478px) {
-
-				font: 800 0.7em/1em "Open Sans", sans-serif;
-  text-align: center;
-}
-
-				@media (min-width: 960px) {
-
-					margin: 0 auto;
-					font: 800 2.5em/1em "Open Sans", sans-serif;
+				@media (max-width: 478px) {
+					font: 800 0.7em/1em "Open Sans", sans-serif;
+					text-align: center;
 				}
-				font: 800 3em/1em "Open Sans",sans-serif;
+				@media (min-width: 960px) {
+					white-space: normal;
+					margin: 0 auto;
+					padding: 0;
+					font: 800 3.4em/1em "Open Sans", sans-serif;
+				}
+				white-space: pre-line;
+				font: 800 2.8em/1em "Open Sans",sans-serif;
 				color: #00B9E0;
 				text-transform: uppercase;
 				display: table-cell;
@@ -921,10 +948,11 @@ body>header {
 		}
 		.why {
 			@media (min-width: 960px) {
-				width:95%;
+				width:100%;
 			}
 			@media (max-width: 479px) {
-				width:85%;
+				width:100%;
+				font-size: 1.4em;
 			}
 
 
@@ -943,6 +971,9 @@ body>header {
 			p {
 				margin: 0px 0px;
 				padding: 19px 13px 19px 27px;
+				@media (max-width: 479px) {
+					padding: 14px 5% 19px;					
+				}
 			}
 
 		}	
@@ -1053,7 +1084,7 @@ footer{
 		}
 		margin: 0 auto;
 		.legal{
-			max-width: 960px;
+			max-width: 988px;
 			margin: 0 auto;
 			padding: 5px;			
 			p {
@@ -1118,37 +1149,37 @@ footer{
 	background-image: url("../img/blonde.jpg");
 	background-repeat: no-repeat;
 	background-position: -300px top;
-	min-height: 766px;
+	min-height: 722px;
 	padding: 30px 0 0 0;
 	max-width: 1400px;
 	margin: 0 auto;	
 	@media (min-width: 960px) {
-		background-position: -200px top;
+		background-position: -200px -81px;
 	}
 	@media (min-width: 1024px) {
-		background-position: -166px top;
+		background-position: -166px -81px;
 	}
 	@media (min-width: 1156px) {
-		background-position: -107px top;
+		background-position: -107px -81px;
 	}
 	@media (min-width: 1210px) {
-		background-position: -88px top;
+		background-position: -88px -81px;
 	}
 	@media (min-width: 1280px) {
-		background-position: -45px top;
+		background-position: -45px -81px;
 	}
 	@media (min-width: 1400px) {
-		background-position: left top;
+		background-position: left -81px;
 	}
 
 	.congratsWrap {	
-		max-width: 980px;
+		max-width: 988px;
 		margin: 0;
 		padding: 0;
 		margin: 0 auto;	
 		.congrats {
-			margin: 0px 0.5% 30px;
-			width: 99%;
+			margin: 0px 0 25px;
+			width: 100%;
 			background-color: #00B9E0;
 			border: 2px solid #FFF;
 			-moz-border-radius: 10px;
@@ -1179,7 +1210,7 @@ footer{
 		}
 	}
 	.group {
-		max-width: 980px;
+		max-width: 988px;
 		margin: 0;
 		padding: 0;
 		margin: 0 auto;
@@ -1195,19 +1226,20 @@ footer{
 			@media (max-width: 959px) {
 				display: block;
 				float: none;
-				width: 100%;
+				width: 98%;
+				margin: 0 1%;
 				max-width: none;
 			}
 			
 			.confirmation {
 				color: #000;
-				width: 98%;
-				margin: 0px 1%;
+				width: 100%;
+				margin: 0;
 				header {
-					font: 700 2.1em "Open Sans",sans-serif;
+					font: 700 2em "Open Sans",sans-serif;
 				}
 				p {
-					font: 600 1.667em "Open Sans",sans-serif;
+					font: 600 1.7em/1.55em "Open Sans",sans-serif;
 					b {
 						font-weight: 700;
 						span {
@@ -1248,7 +1280,7 @@ footer{
 					position: relative;
 					display: block;
 					width: 100%;
-					height: 3em;
+					height: 3.5em;
 					background-color: #082E6C;
 					border: 1px solid #FFF;
 					
@@ -1256,7 +1288,7 @@ footer{
 					-webkit-border-radius: 10px 10px 0 0;
 					border-radius: 10px 10px 0 0;
 					
-					font: 700 2.5em/1.25em "Open Sans",sans-serif;
+					font: 700 2.5em/1.5em "Open Sans",sans-serif;
 					color: #fff;
 					
 					text-align: center;
@@ -1269,15 +1301,15 @@ footer{
 					.fix {
 						position: relative;
 						top: 50%;
-						margin: -1.25em 0 0 0;
+						margin: -1.5em 0 0 0;
 					}
 				}
 
 				.body {
 					h3 {
 						color: #000;
-						font: 600 1.667em "Open Sans",sans-serif;
-						padding: 10px 3.5% 0;
+						font: 600 2em "Open Sans",sans-serif;
+						padding: 5px 3.5% 3px;
 						margin: 0;
 					}
 					hr {
@@ -1291,12 +1323,12 @@ footer{
 					p {
 						color: #000;
 						font: 400 1.7em/1.25em "Open Sans",sans-serif;
-						padding: 8px 3.5% 20px;
+						padding: 8px 3.5% 14px;
 						margin: 0;
 					}
 					table {
-						width: 93%;
-						margin: 10px 3.5% 30px;
+						width: 94%;
+						margin: 10px 3% 20px;
 						font: 400 1.7em/1.25em "Open Sans",sans-serif;
 						td:last-child {
 							text-align: right;
@@ -1318,6 +1350,11 @@ footer{
 
 .proceed {
 	padding-top: 30px;
+	min-height: 536px;
+	padding-top: 30px;
+	background-image: url("../img/orderbg.jpg");
+	background-position: center top;
+	background-repeat: no-repeat;
 	h1 {
 		margin: 0;
 		padding: 0;
@@ -1325,6 +1362,12 @@ footer{
 		text-align: center;
 		color: #082E6C;
 		font: 700 4.167em/1em "Open Sans",sans-serif;
+		@media (max-width: 480px) {
+			font: 700 3em/1em "Open Sans",sans-serif;
+		}
+		@media (max-width: 360px) {
+			font: 700 2.4em/1em "Open Sans",sans-serif;
+		}
 	}
 	h2 {
 		margin: 0;
@@ -1333,6 +1376,12 @@ footer{
 		text-align: center;
 		color: #0bbce2;
 		font: 700 4.167em "Open Sans",sans-serif;
+		@media (max-width: 480px) {
+			font: 700 3em/1.25em "Open Sans",sans-serif;
+		}
+		@media (max-width: 360px) {
+			font: 700 2em/1em "Open Sans",sans-serif;
+		}
 	}
 	h3 {
 		margin: 0;
@@ -1341,6 +1390,15 @@ footer{
 		text-align: center;
 		color: #082e6c;
 		font: 600 1.875em "Open Sans",sans-serif;
+		@media (max-width: 480px) {
+			font: 700 1.8em/1em "Open Sans",sans-serif;
+			margin-top: 20px;
+		}
+		@media (max-width: 360px) {
+			font: 700 2em/1em "Open Sans", sans-serif;
+			white-space: pre-line;
+		}
+
 	}
 	.titleWrap {
 		.title {
@@ -1461,6 +1519,10 @@ footer{
 						display: block;
 						min-width: 460px;
 						position: relative;
+						@media (max-width: 480px) {
+							min-width: 100%;
+							font: 700 3em/1.5em "Open Sans",sans-serif;						
+						}	
 					}
 
 					.body {
@@ -1593,7 +1655,7 @@ footer{
 							background-repeat: no-repeat;
 							background-position: center;
 							height: 140px;
-							background-size: 60% auto;
+							background-size: 90% auto;
 							
 							@media (min-width: 480px) {
 								background-size: 90% auto;
@@ -1653,11 +1715,15 @@ footer{
 					
 					-moz-border-radius: 10px 10px 0 0;
 					-webkit-border-radius: 10px 10px 0 0;
-					border-radius: 10px 10px 0 0;		
+					border-radius: 10px 10px 0 0;
+					@media (max-width: 480px) {
+						font: 700 3em/1.5em "Open Sans",sans-serif;
+						height: auto;						
+					}		
 					
 				}
 				.body {
-
+					padding: 0 0 15px 0;
 					#secondpage {
 
 						#billingsame {
@@ -1676,7 +1742,10 @@ footer{
 								float: left;
 								min-width: 75px;
 								width: 24%;
-								text-align: center;							
+								text-align: center;	
+								@media (max-width: 480px) {
+									width: 50%;
+								}						
 							}
 
 							.active {
@@ -1705,6 +1774,16 @@ footer{
 								background-repeat: no-repeat;
 								background-position: 5px top;
 								
+
+								@media (max-width: 480px) {
+									display: block;
+									clear: both;
+									width: 100%;
+									border-bottom: 0;
+									margin-top: 8px;
+								}
+								
+
 								&.on {
 									background-position: 5px -26px;
 								}
@@ -1733,13 +1812,13 @@ footer{
 									display: inline-block;
 									float: left;
 									
-									input[type="text"], input[type="tel"], input[type="number"], input[type="email"],select {
+									input[type="text"], input[type="tel"], input[type="number"], input[type="email"]{
 										width: 82%;
-										display: block;
+										display: inline;
 										padding: 0;
 										text-indent: 10px;
 										height: 32px;
-										margin: 5px 10%;								
+										margin: 5px 10% 18px;								
 									}
 								}								
 							}
@@ -1813,7 +1892,7 @@ footer{
 
 						input[type="text"], input[type="tel"], input[type="number"],
 						input[type="email"],select {
-							width: 90%;
+							width: 91%;
 							display: block;
 							padding: 0;
 							text-indent: 10px;
@@ -1837,8 +1916,9 @@ footer{
 							&.error {
 								color: red;
 								font-size: 1.25em;
-								margin: 0px 0 5px 30px;
+								margin: -14px 0 5px 30px;
 								font-weight: 600;
+								position: absolute;
 							}
 						}
 
@@ -1874,16 +1954,36 @@ footer{
 								display: inline-block;
 								margin-left: 25px;
 							}
-							label.picCtrl {
-								padding: 0 5px 0 0;
-								margin: 0;
-								text-indent: 25px;
+							
+							input[type="radio"] {
+								display:none;
+							}
+							input[type="radio"] + label {
 								display: inline-block;
+								margin: 0 10px 0 0;
+							}
+							input[type="radio"] + label span {
+								display:inline-block;
+								width:22px;
+								height:22px;
+								margin:-1px 4px 0 0;
+								vertical-align:middle;
+								cursor:pointer;
+								
 								background-image: url("../img/radio.png");
 								background-position: left top;
 								background-repeat: no-repeat;
-								height: 22px;
+								float: left;
 							}
+
+							input[type="radio"] + label span {
+								
+							}
+
+							input[type="radio"]:checked + label span{
+								background-position: left bottom;
+							}
+
 						}
 
 						.dependants {
@@ -1935,36 +2035,165 @@ footer{
 								margin: 21px 0 0 -34px;
 								@media (min-width: 960px) {
 									margin-top: 0px;
-								}	
+								}
+								@media (max-width: 360px) {
+									right: 5px;
+								}
+
+
+
 							}
 
 							
 						}
+
+						.cardtype {
+							#cctypeD {
+								width: 100%;
+								margin: 0;
+								padding: 0;
+								
+								@media (min-width: 480px) {
+									margin: 0 0 0 -20px;
+								}									
+							}
+							.group {
+								display: inline-block;
+								width: 50%;
+								padding: 0 0% 0 25px;
+								float: left;
+								@media (max-width: 479px) {
+									display: block;
+									width: 100%;
+									padding: 0 0% 0 15px;
+									margin-bottom: 10px;
+								}								
+								
+							}
+							.shift {
+								position: relative;
+								top: 2px;
+							}
+							label,input {
+								display: inline;
+							}
+							label.notinline {
+								display: block;
+								margin-bottom: 10px;
+							}
+							label.narrow {
+								margin: 0;
+								padding: 0;
+								font-style: italic;
+								font-size: 1.25em;
+								position: relative;
+								font-style: italic;
+								bottom: 10px;
+								left: 10px;
+							}
+							input[type="radio"] {
+								display: none;
+							}
+
+							input[type="radio"] + label {
+								display: inline-block;
+								margin: 0 1px 0 0;
+							}
+							input[type="radio"] + label span {
+
+								display:inline-block;
+								width: 41px;
+								height: 27px;
+								vertical-align:middle;
+								cursor:pointer;
+								background-image: url("../img/cctype.png");
+
+								background-repeat: no-repeat;
+								float: left;
+								
+								border: 2px solid #EBEBEB;							
+								
+							}
+
+							input[type="radio"] + label.master span {
+								background-position: left center;
+							}
+
+							input[type="radio"] + label.visa span {
+								background-position: center center;								
+							}
+							input[type="radio"] + label.amex span {
+								background-position: right center;								
+							}
+
+							input[type="radio"]:checked + label span{
+								border: 2px solid red;
+								-moz-border-radius:2px;
+								-webkit-border-radius: 2px;
+								border-radius: 2px;
+							}
+
+							
+						}
+
 						
 						.expiration {
-							@media (min-width: 959px) {
+							@media (max-width: 959px) {
+								margin-left: 24px;
+							}
+							@media (max-width: 479px) {
+								margin-left: 5%;
+								select[name="ccexpiremonth"] {
+									width: 70%;
+								}
+								select[name="ccexpireyear"] {
+									width: 20%;		
+								}
+
+							}
+
+
+							@media (min-width: 960px) {
 								select {
 									display: inline;
 									width: 37%;
 								}
 							}
+							label {
+								margin: 0 0 0 7px;
+
+							}
 
 							select {
 								display: inline;
+								margin: 5px 10px 5px 0;								
+							}
+							select[name="ccexpiremonth"] {
+								width: 126px;
+								
 								
 							}
+							select[name="ccexpireyear"] {
+								width: 80px;
+								
+							}
+
+
 						}
 
 						.cvv {
 							input {
 								width: 50px;
 								display: inline-block;
-								margin: 0px 0 0 5%;
+								margin: 0;
 								padding: 0;
 								float: left;
 							}
 							.cvvgroup {
 								display: inline-block;
+								width: 108px;
+								margin-left: 5%;
+								float: left;
 							}
 							.cvvpic {
 								display: inline-block;
@@ -1974,7 +2203,17 @@ footer{
 								background-image: url("../img/cvvpic.png");
 								background-position: center top;
 								background-repeat: no-repeat;
-								margin: 2px 2%;
+								margin: 2px 9px;
+							}
+							label.under {
+								font-style: italic;
+								display: inline-block;
+								float: left;
+								margin: 7px;
+								@media (max-width: 479px) {
+									display: block;
+									margin: 5px 20px;
+								}
 							}
 
 						}
@@ -1982,10 +2221,9 @@ footer{
 						.ok {
 							@media (min-width: 959px) {
 								margin:15px 0;
-
-
 							}
 							margin:15px 0;
+							padding: 0 0 0 20px;
 
 
 							.checkbox {
@@ -2008,6 +2246,7 @@ footer{
 								position: relative;
 								top: 5px;
 								width: 95%;
+								
 
 
 								color: #231F20;
@@ -2019,7 +2258,7 @@ footer{
 
 						#validate2 {
 							padding: 0;
-							margin: 30px auto;
+							margin: 20px auto;
 							width: 268px;
 							height: 80px;							
 							background-image: url("../img/proceed.png");
